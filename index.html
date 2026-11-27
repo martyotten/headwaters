@@ -6,6 +6,23 @@
 <title>Headwaters Advisory Group | Transformation for retail, healthcare and life sciences</title>
 <meta name="description" content="Headwaters Advisory Group helps retail, healthcare and life sciences organizations modernize platforms, put AI into production, and get more from technology spend.">
 <meta name="theme-color" content="#0B2630">
+<link rel="canonical" href="https://{{DOMAIN}}/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Headwaters Advisory Group">
+<meta property="og:title" content="Headwaters Advisory Group | Big change starts at the source">
+<meta property="og:description" content="We help retail, healthcare and life sciences organizations modernize platforms, put AI into production, and get more from technology spend.">
+<meta property="og:url" content="https://{{DOMAIN}}/">
+<meta property="og:image" content="https://{{DOMAIN}}/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Headwaters Advisory Group: Big change starts at the source.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Headwaters Advisory Group | Big change starts at the source">
+<meta name="twitter:description" content="We help retail, healthcare and life sciences organizations modernize platforms, put AI into production, and get more from technology spend.">
+<meta name="twitter:image" content="https://{{DOMAIN}}/og-image.png">
+<meta name="twitter:image:alt" content="Headwaters Advisory Group: Big change starts at the source.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
@@ -68,6 +85,13 @@ input,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid 
 input:focus,textarea:focus{outline:2px solid #1A6B5E;outline-offset:1px;border-color:#1A6B5E}
 textarea{min-height:130px;resize:vertical}
 .hidden{display:none}
+.reach{list-style:none;padding:0;margin:32px 0 0;display:flex;flex-direction:column;gap:14px;font-size:17px}
+.reach li{display:flex;align-items:center;gap:12px;color:#C3D4D8}
+.reach svg{flex:none;width:20px;height:20px;stroke:#7FD1BF;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.reach a{color:#fff;text-decoration:underline;text-decoration-color:#5D7C84;text-underline-offset:3px}
+.reach a:hover{text-decoration-color:#7FD1BF}
+.form-note{font-size:14px;color:#4A6168}
+footer a{color:#C3D4D8}footer a:hover{color:#fff}
 footer{background:#071C23;color:#9FB4BA;font-size:14px;padding:28px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 @media (max-width:640px){section{padding:72px 0}.hero{padding:56px 0 80px}.wrap{padding:0 20px}form{padding:24px}}
@@ -174,6 +198,11 @@ Headwaters Advisory Group
 <p class="eyebrow">Get in touch</p>
 <h2>Tell us what you're trying to change.</h2>
 <p class="lead">A few sentences is plenty. We'll reply within two business days. If it's a fit, we'll set up a call. If it isn't, we'll say so and point you somewhere better.</p>
+<ul class="reach">
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg><a href="{{LINKEDIN_URL}}" rel="noopener" target="_blank">Headwaters on LinkedIn</a></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>{{CITY}}</span></li>
+</ul>
 </div>
 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="contact">
@@ -183,6 +212,7 @@ Headwaters Advisory Group
 <label>Organization <span>(optional)</span><input type="text" name="organization" autocomplete="organization"></label>
 <label>What are you trying to change?<textarea name="message" required></textarea></label>
 <button class="btn btn-primary" type="submit">Send message</button>
+<p class="form-note">We only use what you send to reply to you. See our <a href="privacy.html">privacy notice</a>.</p>
 </form>
 </div>
 </section>
@@ -190,8 +220,8 @@ Headwaters Advisory Group
 
 <footer>
 <div class="wrap">
-<span>Headwaters Advisory Group · Based in Minnesota</span>
-<span>© 2026 Headwaters Advisory Group LLC</span>
+<span>Headwaters Advisory Group · {{CITY}}</span>
+<span><a href="privacy.html">Privacy</a> · © 2026 Headwaters Advisory Group LLC</span>
 </div>
 </footer>
 </body>
