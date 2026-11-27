@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Headwaters Advisory Group | Transformation for retail, healthcare and life sciences</title>
+<meta name="description" content="Headwaters Advisory Group helps retail, healthcare and life sciences organizations modernize platforms, put AI into production, and get more from technology spend.">
+<meta name="theme-color" content="#0B2630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#10262E;background:#fff;line-height:1.6}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;margin:0;line-height:1.1;color:#0B2630}
+p{margin:0}
+a{color:#1A6B5E}a:hover{color:#0F4F45}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#0B2630;padding:8px 14px;border-radius:6px;z-index:10}
+.skip:focus{left:16px}
+.dark{background:#0B2630;color:#fff}
+.dark h1,.dark h2,.dark h3{color:#fff}
+.dark .lead,.dark .muted{color:#C3D4D8}
+.tint{background:#F2F6F6}
+section{padding:104px 0}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#1A6B5E;margin-bottom:16px}
+.dark .eyebrow{color:#7FD1BF}
+.head{max-width:760px;margin-bottom:48px}
+.head h2{font-size:clamp(32px,4vw,44px);margin-bottom:16px}
+.lead{font-size:18px;color:#4A6168}
+.muted{color:#4A6168}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:22px;padding-bottom:22px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px}
+.logo:hover{color:#fff}
+nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px}
+nav a{color:#D5E3E6;text-decoration:none}nav a:hover{color:#fff}
+.hero{padding:88px 0 112px}
+.hero h1{font-size:clamp(40px,6vw,64px);letter-spacing:-1px;max-width:900px;margin-bottom:28px}
+.hero .lead{font-size:20px;max-width:720px}
+.ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
+.btn{display:inline-block;font-weight:600;font-size:16px;padding:16px 28px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn-primary{background:#1A6B5E;color:#fff}.btn-primary:hover{background:#0F4F45;color:#fff}
+.btn-ghost{border:1.5px solid #5D7C84;color:#fff;padding:15px 28px}.btn-ghost:hover{border-color:#fff;color:#fff}
+.grid{display:flex;flex-wrap:wrap;gap:24px}
+.card{flex:1 1 340px;border:1px solid #DCE6E7;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:12px;background:#fff}
+.card h3{font-size:22px}
+.num{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;color:#1A6B5E}
+.example{font-size:15px;color:#4A6168;border-top:1px solid #E7EEEF;padding-top:12px;margin-top:auto}
+.example strong{color:#10262E;font-weight:600}
+.steps{display:flex;flex-wrap:wrap;gap:24px;list-style:none;padding:0;margin:0}
+.steps li{flex:1 1 320px;display:flex;flex-direction:column;gap:12px}
+.step-n{width:48px;height:48px;border-radius:50%;background:#1A6B5E;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:20px}
+.steps h3{font-size:22px}
+.ind{flex:1 1 320px;background:#12333E;border-radius:12px;padding:36px;display:flex;flex-direction:column;gap:14px}
+.ind h3{font-size:26px}
+.ind ul{margin:0;padding-left:18px;color:#C3D4D8;font-size:16px}
+.ind li{margin-bottom:6px}
+.why{flex:1 1 260px;display:flex;flex-direction:column;gap:10px}
+.why h3{font-size:20px}
+.contact{display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start}
+.contact .intro{flex:1 1 420px}
+.contact .intro h2{font-size:clamp(32px,4vw,44px);margin-bottom:16px}
+form{flex:1 1 460px;background:#fff;border-radius:12px;padding:36px;display:flex;flex-direction:column;gap:18px;color:#10262E}
+label{font-size:15px;font-weight:600;display:flex;flex-direction:column;gap:6px}
+label span{font-weight:400;color:#4A6168}
+input,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid #B9C9CC;border-radius:8px;color:#10262E;background:#fff}
+input:focus,textarea:focus{outline:2px solid #1A6B5E;outline-offset:1px;border-color:#1A6B5E}
+textarea{min-height:130px;resize:vertical}
+.hidden{display:none}
+footer{background:#071C23;color:#9FB4BA;font-size:14px;padding:28px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+@media (max-width:640px){section{padding:72px 0}.hero{padding:56px 0 80px}.wrap{padding:0 20px}form{padding:24px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="dark">
+<div class="wrap">
+<a class="logo" href="#top">
+<svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#7FD1BF" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M17 3v9"/><path d="M17 12c0 6-8 7-8 14"/><path d="M17 12c0 6 8 7 8 14"/><path d="M17 12v19"/></svg>
+Headwaters Advisory Group
+</a>
+<nav aria-label="Main">
+<a href="#what">What we do</a>
+<a href="#how">How we work</a>
+<a href="#industries">Industries</a>
+<a href="#why">Why Headwaters</a>
+<a href="#contact">Get in touch</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section id="top" class="dark hero">
+<div class="wrap">
+<p class="eyebrow">Transformation · AI · Data</p>
+<h1>Big change starts at the source.</h1>
+<p class="lead">We help retail, healthcare and life sciences organizations modernize their platforms, put AI into production, and get more from every technology dollar. Our people have run this work from the inside, so you get results, not a slide deck.</p>
+<div class="ctas">
+<a class="btn btn-primary" href="#contact">Tell us what you're solving</a>
+<a class="btn btn-ghost" href="#what">See what we do</a>
+</div>
+</div>
+</section>
+
+<section id="what">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">What we do</p>
+<h2>Strategy at the top. Execution all the way down.</h2>
+<p class="lead">No standard package. We start with where your business needs to go and the systems you already have, then do the work to get there.</p>
+</div>
+<div class="grid">
+<div class="card"><div class="num">01</div><h3>Transformation roadmaps that hold</h3><p class="muted">A clear multi-year plan with the executive alignment to carry it through budget cycles and leadership changes.</p><p class="example"><strong>For example:</strong> a retailer rallying its leadership team behind a five-year digital program.</p></div>
+<div class="card"><div class="num">02</div><h3>AI that makes it to production</h3><p class="muted">AI strategy, responsible-AI governance, and real deployments that customers and employees use every day.</p><p class="example"><strong>For example:</strong> a customer-service assistant that goes live with guardrails in place.</p></div>
+<div class="card"><div class="num">03</div><h3>One view of your customer</h3><p class="muted">Data platforms that bring scattered records together, so teams can sell, serve and decide with the full picture.</p><p class="example"><strong>For example:</strong> a health plan connecting members, providers, employers and brokers.</p></div>
+<div class="card"><div class="num">04</div><h3>Modern platforms, minus the drama</h3><p class="muted">ERP, CRM, e-commerce and cloud re-platforms, planned so revenue channels and service levels stay protected.</p><p class="example"><strong>For example:</strong> moving a high-traffic storefront to the cloud without missing a season.</p></div>
+<div class="card"><div class="num">05</div><h3>A delivery model that ships more for less</h3><p class="muted">Agile, DevOps and product-team practices, plus global delivery that lowers cost without lowering the bar.</p><p class="example"><strong>For example:</strong> cutting run-rate delivery cost while service levels improve.</p></div>
+<div class="card"><div class="num">06</div><h3>Interim and fractional leadership</h3><p class="muted">Experienced CIO and CTO leadership when you're between hires, mid-reorganization, or need a steady hand with the board.</p><p class="example"><strong>For example:</strong> leading technology through a major reorganization while hitting savings targets.</p></div>
+</div>
+</div>
+</section>
+
+<section id="how" class="tint">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">How we work</p>
+<h2>Like a river: start small, build momentum.</h2>
+<p class="lead">Every big river starts as a stream you can step across. We work the same way, with one meaningful win that grows into lasting change.</p>
+</div>
+<ol class="steps">
+<li><div class="step-n">1</div><h3>Start at the source</h3><p class="muted">We listen to your leaders and teams, look at what's really in place, and find the move that matters most. A focused assessment in weeks, not a months-long audit.</p></li>
+<li><div class="step-n">2</div><h3>Prove it in production</h3><p class="muted">We deliver one high-value result early, in working systems, so everyone can see the change is real.</p></li>
+<li><div class="step-n">3</div><h3>Build the current</h3><p class="muted">We scale what works, strengthen your team and operating model, and hand over a capability that keeps moving without us.</p></li>
+</ol>
+</div>
+</section>
+
+<section id="industries" class="dark">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">Industries</p>
+<h2>We know your business because we've run technology in it.</h2>
+<p class="lead">Our experience comes from inside Fortune 50 retail, a national health plan, and a global life sciences company.</p>
+</div>
+<div class="grid">
+<div class="ind"><h3>Retail &amp; e-commerce</h3><ul><li>Omnichannel commerce and order management</li><li>Point of sale, pricing and promotion</li><li>Personalization and customer data</li><li>Payment data security</li><li>Cloud re-platforming at scale</li></ul></div>
+<div class="ind"><h3>Healthcare</h3><ul><li>Health plan and benefits administration</li><li>Member, provider and employer data</li><li>Billing, capitation and value-based care</li><li>Digital and mobile member experience</li><li>Delivery under strict regulation</li></ul></div>
+<div class="ind"><h3>Life sciences</h3><ul><li>Global digital commerce</li><li>CRM and field service</li><li>ERP integration, including SAP S/4</li><li>Customer data platforms</li><li>Responsible AI in regulated settings</li></ul></div>
+</div>
+</div>
+</section>
+
+<section id="why">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">Why Headwaters</p>
+<h2>Advisors who've been accountable for the outcome.</h2>
+</div>
+<div class="grid">
+<div class="why"><h3>Operators, not observers</h3><p class="muted">We've owned the budgets, the teams and the results, so our advice comes from experience.</p></div>
+<div class="why"><h3>Strategy and execution together</h3><p class="muted">The people who shape the plan stay to deliver it. Nothing gets lost in a handoff.</p></div>
+<div class="why"><h3>Built for high stakes</h3><p class="muted">Regulated, always-on environments where downtime and compliance gaps aren't an option.</p></div>
+<div class="why"><h3>Minnesota-based, nationwide</h3><p class="muted">Rooted in the Twin Cities and working wherever our clients are. You'll always reach a senior person.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="dark">
+<div class="wrap contact">
+<div class="intro">
+<p class="eyebrow">Get in touch</p>
+<h2>Tell us what you're trying to change.</h2>
+<p class="lead">A few sentences is plenty. We'll reply within two business days. If it's a fit, we'll set up a call. If it isn't, we'll say so and point you somewhere better.</p>
+</div>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact">
+<p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+<label>Your name<input type="text" name="name" autocomplete="name" required></label>
+<label>Email<input type="email" name="email" autocomplete="email" required></label>
+<label>Organization <span>(optional)</span><input type="text" name="organization" autocomplete="organization"></label>
+<label>What are you trying to change?<textarea name="message" required></textarea></label>
+<button class="btn btn-primary" type="submit">Send message</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<span>Headwaters Advisory Group · Based in Minnesota</span>
+<span>© 2026 Headwaters Advisory Group LLC</span>
+</div>
+</footer>
+</body>
+</html>
