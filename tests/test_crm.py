@@ -103,7 +103,8 @@ class TestCrmConfig(unittest.TestCase):
         self.assertEqual(payload.get("role"), "anon", "only the anon key may be committed")
 
     def test_no_secrets_anywhere_in_crm(self):
-        for dirpath, _, files in os.walk(CRM):
+        dirs = [CRM, os.path.join(ROOT, "netlify")]
+        for dirpath, _, files in (w for d in dirs for w in os.walk(d)):
             for name in files:
                 if "vendor" in dirpath:
                     continue
@@ -113,6 +114,14 @@ class TestCrmConfig(unittest.TestCase):
                     for jwt in re.findall(r"eyJ[A-Za-z0-9_-]+\.(eyJ[A-Za-z0-9_-]+)\.[A-Za-z0-9_-]+", text):
                         payload = json.loads(base64.urlsafe_b64decode(jwt + "=" * (-len(jwt) % 4)))
                         self.assertNotEqual(payload.get("role"), "service_role", "service_role key found")
+
+
+class TestFormFunction(unittest.TestCase):
+    def test_secret_key_comes_from_environment(self):
+        src = read("netlify", "functions", "submission-created.js")
+        for var in ("SUPABASE_URL", "SUPABASE_SECRET_KEY", "CRM_OWNER_ID"):
+            self.assertIn(var, src)
+        self.assertIn("process.env", src)
 
 
 class TestHeaders(unittest.TestCase):
