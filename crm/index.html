@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0B2630">
+<title>Headwaters CRM</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/crm/crm.css">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="#/">Headwaters CRM</a>
+  <nav id="nav" hidden>
+    <a href="#/">Today</a>
+    <a href="#/contacts">Contacts</a>
+    <a href="#/new" class="add">+ Contact</a>
+    <button type="button" id="signout" class="link">Sign out</button>
+  </nav>
+</header>
+<main id="app" aria-live="polite">
+  <p class="muted">Loading…</p>
+</main>
+<noscript><p class="wrap">This page needs JavaScript.</p></noscript>
+<script src="/crm/vendor/supabase-2.49.4.js"></script>
+<script src="/crm/config.js"></script>
+<script src="/crm/app.js"></script>
+</body>
+</html>
