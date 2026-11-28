@@ -147,11 +147,14 @@
           options: { shouldCreateUser: false, emailRedirectTo: location.origin + "/crm/" },
         });
         busy(form, false);
-        // Same message either way, so the page doesn't reveal which emails have accounts.
-        if (error && error.status && error.status >= 500) {
-          flash = { text: "Couldn't send the link right now. Please try again in a minute.", err: true };
+        if (!error) {
+          flash = { text: "Sign-in link sent to " + email.value.trim() + ". Check your inbox (and spam), then open it on this device." };
+        } else if (error.status === 429 || /rate limit/i.test(error.message || "")) {
+          flash = { text: "Too many sign-in emails were requested recently, so Supabase is holding off. Wait a few minutes and try again, or use the most recent link you received.", err: true };
+        } else if (error.code === "otp_disabled" || /signups not allowed/i.test(error.message || "")) {
+          flash = { text: "That email doesn't have access. Check it matches the user you added in Supabase.", err: true };
         } else {
-          flash = { text: "If that email has access, a sign-in link is on its way. Open it on this device." };
+          flash = { text: "Couldn't send the link: " + (error.message || "unknown error") + (error.status ? " (" + error.status + ")" : ""), err: true };
         }
         signInView();
       },
