@@ -5,6 +5,6 @@
 // decide what anyone can see. Use the "Publishable" key (or the legacy "anon"
 // key). NEVER put the "Secret" or "service_role" key here; the tests refuse it.
 window.CRM_CONFIG = {
-  supabaseUrl: "",
-  supabaseKey: ""
+  supabaseUrl: "https://tergtnvvjzjvtpoiqpsk.supabase.co",
+  supabaseKey: "sb_publishable_oeZVEN2c3EpJWy2kwnwjVw_WkOdhLYk"
 };
