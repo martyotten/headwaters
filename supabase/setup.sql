@@ -77,6 +77,11 @@ alter table public.actions   force row level security;
 revoke all on public.contacts, public.followups, public.actions from anon;
 grant select, insert, update, delete
   on public.contacts, public.followups, public.actions to authenticated;
+-- The website form function (netlify/functions/submission-created.js) uses the
+-- secret key, which acts as service_role. Newer Supabase projects don't grant
+-- new tables to it automatically.
+grant select, insert, update
+  on public.contacts, public.followups, public.actions to service_role;
 
 drop policy if exists "owner only" on public.contacts;
 create policy "owner only" on public.contacts

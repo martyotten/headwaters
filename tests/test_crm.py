@@ -160,6 +160,11 @@ class TestDatabaseSetup(unittest.TestCase):
                 table_def = re.search(rf"create table if not exists public\.{t} \((.*?)\n\);", self.sql, re.S).group(1)
                 self.assertRegex(table_def, r"owner_id\s+uuid not null default auth\.uid\(\)")
 
+    def test_form_function_can_write(self):
+        # The form function uses the secret key (service_role); newer Supabase
+        # projects don't grant new tables to it by default.
+        self.assertRegex(self.sql, r"grant select, insert, update\s+on public\.contacts, public\.followups, public\.actions to service_role;")
+
     def test_anonymous_visitors_get_nothing(self):
         self.assertIn("revoke all on public.contacts, public.followups, public.actions from anon", self.sql)
         self.assertNotRegex(self.sql, r"grant [^;]* to anon")
