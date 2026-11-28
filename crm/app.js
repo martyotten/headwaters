@@ -144,7 +144,7 @@
         busy(form, true);
         const { error } = await db.auth.signInWithOtp({
           email: email.value.trim(),
-          options: { shouldCreateUser: false, emailRedirectTo: location.origin + location.pathname },
+          options: { shouldCreateUser: false, emailRedirectTo: location.origin + "/crm/" },
         });
         busy(form, false);
         // Same message either way, so the page doesn't reveal which emails have accounts.
