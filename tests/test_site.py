@@ -191,6 +191,8 @@ class TestContactForm(unittest.TestCase):
             self.assertIn(name, fields)
             self.assertIn("required", fields[name], f"{name} should be required")
         self.assertEqual(fields["email"].get("type"), "email")
+        self.assertEqual(fields["phone"].get("type"), "tel")
+        self.assertNotIn("required", fields["phone"], "phone should be optional")
         self.assertTrue(self.page.find("button", type="submit"))
 
 
